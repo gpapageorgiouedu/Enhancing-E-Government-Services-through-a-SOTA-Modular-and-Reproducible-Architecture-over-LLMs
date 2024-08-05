@@ -1,0 +1,14 @@
+<div class="indexing-container">
+    <h2>Document Indexing Portal</h2>
+    <form id="indexing-form" class="indexing-form" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".txt, .pdf, .doc, .docx" required>
+        <input type="submit" value="Upload and Preview Document">
+    </form>
+    <div id="document-details-container" style="display:none;">
+        <h3 id="document-title"></h3>
+        <div id="document-content" style="white-space: pre-wrap;"></div>
+        <button id="confirm-index">Index Document</button>
+        <button id="cancel-index">Cancel</button>
+    </div>
+    <div id="message"></div>
+</div>

@@ -1,0 +1,149 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+.tabs a {
+    padding: 10px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    display: inline-block;
+}
+.tabs a.active {
+    background-color: #007bff;
+    color: white;
+}
+.logo {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 124px; /* Change the logo size */
+    width: auto;
+    border-radius: 10%; /* Makes the edges of the logo circular */
+    overflow: hidden; /* Ensures the image does not overflow its container */
+}
+.tabs {
+    position: relative;
+    top: 120px; /* Clear the space below the logo */
+    padding-top: 10px; /* This gives some space below the logo */
+    margin-left: 70px; /* This should match the width of your logo to prevent overlap */
+}
+.content-container {
+    display: none;
+    margin-top: 20px;
+}
+.content-container.active {
+    display: block;
+}
+.chat-container, .indexing-container {
+    width: 50%;
+    margin: auto;
+    margin-top: 150px; /* Increase this value to push the content further down */
+}
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow-y: auto; /* Enable scrolling for overflow */
+    max-height: 500px; /* Or as per your design needs based on UI*/
+}
+.message {
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    word-break: break-word; /* Ensure long text wraps correctly */
+    display: inline-block; /* Allows for text alignment */
+}
+.normal-text {
+  text-align: left; /* Or use 'justify' if you want to justify the text */
+}
+.user-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-start; /* Aligns questions (user messages) to the left */
+    max-width: 80%;
+}
+.rag-message, .convo-message {
+    background-color: #f1f1f1;
+    color: black;
+    align-self: flex-end; /* Aligns answers (rag and convo messages) to the right */
+    max-width: 80%;
+}
+.clear-button {
+    display: block;
+    width: auto;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #f44336; /* Red color for clear button */
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.clear-button:hover {
+    background-color: #d32f2f;
+}
+.question-form, .indexing-form {
+    margin-top: 20px;
+}
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+/* Container for form elements */
+.question-form > div {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align items to the left */
+    width: 100%;
+}
+/* Style for the textarea */
+.question-form > div > textarea {
+    width: 100%; /* Full width */
+    height: 50px; /* More rectangular shape */
+    margin-bottom: 10px; /* Space between textarea and dropdown */
+}
+/* Style for the dropdown */
+.question-form > div > select {
+    width: auto; /* Shrink to fit content */
+    margin-bottom: 10px; /* Space between dropdown and submit button */
+}
+/* Style for the submit button */
+.question-form > div > input[type="submit"] {
+    width: auto; /* Shrink to fit content */
+    padding: 10px 20px; /* Padding for the button, adjust as needed */
+    margin: 0 auto; /* Center the button */
+    background-color: #007bff; /* Match the background with other elements */
+    color: white; /* Text color for the button */
+    border: 1px solid #007bff; /* Border to match the style of other buttons */
+}
+textarea {
+    height: 50px; /* Adjusted height to make the textarea more rectangular */
+}
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/*CSS for the modal */
+.modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4); }
+.modal-content { background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; }
+.close { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
+.close:hover, .close:focus { color: black; text-decoration: none; cursor: pointer; }
+#rag_convo-label-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+#rag_convo-label {
+    font-weight: bold;
+    color: #fff; /* White text color for better contrast */
+    background: #1687A6; /* The specified blue color */
+    padding: 5px 10px; /* Adjusted padding for better visual based on the needs*/
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 20px; /* Adjust the fonts */
+}

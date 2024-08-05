@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG Model and Document Indexing Interface</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <div class="tabs">
+        <a href="#chat" class="active">Chat</a>
+        <a href="#indexing">Document Indexing</a>
+    </div>
+    <img src="/static/logo.png" alt="Logo" class="logo">
+    <!-- Tabs for navigation -->
+    <div id="chat" class="content-container active">
+        {% include 'chat.html' %}
+    </div>
+    <div id="rag_convo-label-container">
+        <span id="rag_convo-label">RAG - Conversational Agents</span>
+    </div>
+    <div id="indexing" class="content-container">
+        {% include 'indexing.html' %}
+    </div>
+    <!-- Modal HTML goes here -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="doc-summary"></p>
+        </div>
+    </div>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>

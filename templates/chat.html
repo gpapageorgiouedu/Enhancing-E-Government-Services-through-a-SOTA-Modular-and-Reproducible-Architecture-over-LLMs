@@ -1,0 +1,39 @@
+<div class="chat-container">
+    <h2>RAG and Conversational AI Interface</h2>
+    <!-- This container will specifically hold the messages -->
+    <div class="messages-container">
+        {% for message in messages %}
+            {% if message.format == "html" %}
+                <div class="message {{ message.class }}" style="white-space: pre-wrap;">{{ message.content | safe }}</div>
+            {% else %}
+                <div class="message {{ message.class }}">{{ message.content }}</div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <!-- The Clear Chat button has an onclick event that calls the clearChat function -->
+    <button id="clear-chat-button" class="clear-button" type="button" onclick="clearChat()">Clear Chat</button>
+    <form class="question-form" action="/result" method="post">
+        <textarea name="question" placeholder="Enter your question here" required></textarea>
+        <div>
+            <select name="mode">
+                <option value="conversational" {% if last_mode == "conversational" %}selected{% endif %}>Conversational Agent</option>
+                <option value="presscorner" {% if last_mode == "presscorner" %}selected{% endif %}>Press Corner</option>
+                <option value="research" {% if last_mode == "research" %}selected{% endif %}>Research</option>
+                <option value="websearch" {% if last_mode == "websearch" %}selected{% endif %}>Web Search</option>
+                <option value="inmemory" {% if last_mode == "inmemory" %}selected{% endif %}>In Memory</option>
+            </select>
+            <!-- Dropdown for model selection -->
+            <select name="model">
+                <option value="gpt-3.5" {% if last_model == "gpt-3.5" %}selected{% endif %}>GPT-3.5 Turbo</option>
+                <option value="gpt-4o" {% if last_model == "gpt-4o" %}selected{% endif %}>GPT-4o</option>
+            </select>
+            <input type="submit" value="Ask">
+        </div>
+        <!-- File upload for in-memory indexing -->
+        <div>
+            <input type="file" id="inmemory-file" name="file" accept=".txt, .pdf, .doc, .docx" style="display:none;">
+            <button type="button" onclick="document.getElementById('inmemory-file').click();">Upload Document</button>
+        </div>
+    </form>
+    <div id="upload-message" style="color: green; margin-top: 10px;"></div>
+</div>
