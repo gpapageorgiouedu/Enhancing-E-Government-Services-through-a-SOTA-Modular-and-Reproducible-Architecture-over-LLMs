@@ -1,7 +1,23 @@
 # Enhancing-E-Government-Services-through-a-SOTA-Modular-and-Reproducible-Architecture-over-LLMs
 
-This repository has been established in conjunction with the publication of the research paper titled "Enhancing E-Government Services through a state of the art, modular and reproducible architecture over Large Language Models" and serves as a supplementary resource for researchers interested in creating Multi-Agent systems. Our example use case is dedicated to E-Government Services.
+This repository has been established in conjunction with the publication of the research paper titled [Enhancing E-Government Services through a state of the art, modular and reproducible architecture over Large Language Models](https://www.mdpi.com/2076-3417/14/18/8259) and serves as a supplementary resource for researchers interested in creating Multi-Agent systems. Our example use case is dedicated to E-Government Services.
 
+### Citation
+```bibtex
+@Article{app14188259,
+AUTHOR = {Papageorgiou, George and Sarlis, Vangelis and Maragoudakis, Manolis and Tjortjis, Christos},
+TITLE = {Enhancing E-Government Services through State-of-the-Art, Modular, and Reproducible Architecture over Large Language Models},
+JOURNAL = {Applied Sciences},
+VOLUME = {14},
+YEAR = {2024},
+NUMBER = {18},
+ARTICLE-NUMBER = {8259},
+URL = {https://www.mdpi.com/2076-3417/14/18/8259},
+ISSN = {2076-3417},
+ABSTRACT = {Integrating Large Language Models (LLMs) into e-government applications has the potential to improve public service delivery through advanced data processing and automation. This paper explores critical aspects of a modular and reproducible architecture based on Retrieval-Augmented Generation (RAG) for deploying LLM-based assistants within e-government systems. By examining current practices and challenges, we propose a framework ensuring that Artificial Intelligence (AI) systems are modular and reproducible, essential for maintaining scalability, transparency, and ethical standards. Our approach utilizing Haystack demonstrates a complete multi-agent Generative AI (GAI) virtual assistant that facilitates scalability and reproducibility by allowing individual components to be independently scaled. This research focuses on a comprehensive review of the existing literature and presents case study examples to demonstrate how such an architecture can enhance public service operations. This framework provides a valuable case study for researchers, policymakers, and practitioners interested in exploring the integration of advanced computational linguistics and LLMs into e-government services, although it could benefit from further empirical validation.},
+DOI = {10.3390/app14188259}
+}
+```
 
 ## Introduction
 
